@@ -1,0 +1,205 @@
+/* Reset de margens e preenchimentos */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Brush Script MT', cursive; /* Fonte Brush Script */
+    background-color: #FFF3E0; /* Cor de fundo fixa */
+    color: #BF360C;
+    overflow: hidden; /* Evita barras de rolagem */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    min-height: 100vh; /* Garante que o container ocupe pelo menos a altura da tela */
+    padding: 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    text-align: center;
+    position: relative;
+    background-color: rgba(255, 243, 224, 0.7); /* Fundo semi-transparente para melhorar a legibilidade */
+}
+
+/* Imagens das flores */
+.flor-topo-esquerdo {
+    position: absolute;
+    top: 20px; /* Ajuste para posicionar abaixo do topo */
+    left: 20px; /* Ajuste para posicionar próximo à borda esquerda */
+    width: 150px; /* Tamanho ajustado para mobile */
+    z-index: 1;
+    border-radius: 50%; /* Bordas arredondadas */
+    filter: brightness(1.1) saturate(1.2); /* Suaviza a imagem */
+    opacity: 0.9; /* Leve transparência */
+}
+
+.flor-topo-direito {
+    position: absolute;
+    top: 20px; /* Ajuste para posicionar abaixo do topo */
+    right: 20px; /* Ajuste para posicionar próximo à borda direita */
+    width: 150px; /* Tamanho ajustado para mobile */
+    z-index: 1;
+    border-radius: 50%; /* Bordas arredondadas */
+    filter: brightness(1.1) saturate(1.2); /* Suaviza a imagem */
+    opacity: 0.9; /* Leve transparência */
+}
+
+/* Cabeçalho */
+.header {
+    margin-top: 180px; /* Espaço para as flores acima */
+    margin-bottom: 30px; /* Espaço entre o cabeçalho e a galeria */
+}
+
+/* Estilos para as frases */
+h1 {
+    font-size: 2.5em; /* Tamanho grande para a frase principal */
+    margin: 10px 0; /* Espaçamento */
+    color: #D84315;
+}
+
+h2 {
+    font-size: 2em; /* Tamanho um pouco menor */
+    margin: 10px 0; /* Espaçamento */
+    color: #D84315;
+}
+
+h3 {
+    font-size: 1.8em; /* Tamanho médio */
+    margin: 10px 0; /* Espaçamento */
+    color: #D84315;
+}
+
+h4 {
+    font-size: 1.5em; /* Tamanho menor para a última frase */
+    margin: 10px 0; /* Espaçamento */
+    color: #D84315;
+}
+
+/* Contagem regressiva */
+.countdown {
+    margin: 20px 0;
+}
+
+#countdown-timer {
+    font-size: 1.8em; /* Tamanho ajustado para mobile */
+    font-weight: bold;
+    color: #D84315;
+}
+
+/* Galeria de fotos */
+.gallery {
+    margin-top: 20px;
+    width: 100%; /* Ocupa toda a largura */
+    max-width: 800px; /* Limita a largura máxima */
+}
+
+.gallery h2 {
+    font-size: 2em; /* Tamanho ajustado para mobile */
+    margin-bottom: 20px;
+    color: #D84315;
+}
+
+/* Carrossel */
+.carrossel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carrossel-imagens {
+    display: flex;
+    overflow: hidden;
+    width: 300px; /* Largura fixa para o carrossel */
+    height: 300px; /* Altura fixa para o carrossel */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Esconde todas as imagens por padrão */
+}
+
+.carrossel-img.ativa {
+    display: block; /* Mostra apenas a imagem ativa */
+}
+
+.carrossel-btn {
+    background-color: rgba(191, 54, 12, 0.7); /* Cor de fundo dos botões */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carrossel-btn.anterior {
+    left: -50px; /* Posiciona o botão "anterior" à esquerda */
+}
+
+.carrossel-btn.proximo {
+    right: -50px; /* Posiciona o botão "próximo" à direita */
+}
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    .flor-topo-esquerdo, .flor-topo-direito {
+        width: 100px; /* Tamanho menor para mobile */
+    }
+
+    .header {
+        margin-top: 120px; /* Menos espaço no topo para mobile */
+    }
+
+    h1 {
+        font-size: 2em; /* Tamanho menor para mobile */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Tamanho menor para mobile */
+    }
+
+    h3 {
+        font-size: 1.6em; /* Tamanho menor para mobile */
+    }
+
+    h4 {
+        font-size: 1.4em; /* Tamanho menor para mobile */
+    }
+
+    #countdown-timer {
+        font-size: 1.5em; /* Tamanho menor para mobile */
+    }
+
+    .gallery h2 {
+        font-size: 1.8em; /* Tamanho menor para mobile */
+    }
+
+    .carrossel-imagens {
+        width: 250px; /* Tamanho menor para mobile */
+        height: 250px;
+    }
+
+    .carrossel-btn {
+        font-size: 1.2em; /* Tamanho menor para mobile */
+    }
+
+    .carrossel-btn.anterior {
+        left: -40px; /* Ajuste de posição para mobile */
+    }
+
+    .carrossel-btn.proximo {
+        right: -40px; /* Ajuste de posição para mobile */
+    }
+}
