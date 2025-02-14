@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comemoração Especial</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionando a fonte Brush Script do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Conteúdo do site -->
+    <div class="container">
+        <!-- Flores -->
+        <img src="imagens/flor-topo-esquerdo.png" alt="Flor" class="flor-topo-esquerdo">
+        <img src="imagens/flor-topo-direito.png" alt="Flor" class="flor-topo-direito">
+
+        <!-- Cabeçalho -->
+        <div class="header">
+            <h1>Eu conto os dias, conto as horas para te ver, meu amor</h1>
+            <h2>E daqui a</h2>
+            <div class="countdown">
+                <div id="countdown-timer">
+                    <span id="days"></span> Dias
+                    <span id="hours"></span> Horas
+                    <span id="minutes"></span> Minutos
+                    <span id="seconds"></span> Segundos
+                </div>
+            </div>
+            <h3>Nós iremos comemorar 2 anos do nosso namoro</h3>
+            <h4>Peguei algumas das nossas melhores memórias desde o nosso começo juntos</h4>
+        </div>
+
+        <!-- Carrossel de fotos -->
+        <div class="gallery">
+            <h2>Nossas Melhores Memórias</h2>
+            <div class="carrossel">
+                <button class="carrossel-btn anterior" onclick="mudarImagem(-1)">&#10094;</button>
+                <div class="carrossel-imagens">
+                    <img src="imagens/foto1.jpg" alt="Foto 1" class="carrossel-img ativa">
+                    <img src="imagens/foto2.jpg" alt="Foto 2" class="carrossel-img">
+                    <img src="imagens/foto3.jpg" alt="Foto 3" class="carrossel-img">
+                </div>
+                <button class="carrossel-btn proximo" onclick="mudarImagem(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
