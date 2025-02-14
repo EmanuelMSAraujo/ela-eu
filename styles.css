@@ -6,7 +6,7 @@ html, body {
     font-family: 'Brush Script MT', cursive; /* Fonte Brush Script */
     background-color: #FFF3E0; /* Cor de fundo fixa */
     color: #BF360C;
-    overflow: auto; /* Permite rolagem se necessário */
+    overflow: hidden; /* Evita barras de rolagem */
 }
 
 /* Container principal */
