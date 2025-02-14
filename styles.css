@@ -103,53 +103,29 @@ h4 {
 
 /* Carrossel */
 .carrossel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    overflow: hidden;
     position: relative;
 }
 
 .carrossel-imagens {
     display: flex;
-    overflow: hidden;
-    width: 300px; /* Largura fixa para o carrossel */
-    height: 300px; /* Altura fixa para o carrossel */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: auto; /* Permite rolagem horizontal */
+    scroll-snap-type: x mandatory; /* Rola para o próximo item */
+    scroll-behavior: smooth; /* Rola suavemente */
+    gap: 10px; /* Espaço entre as imagens */
+    padding-bottom: 10px; /* Evita cortar as imagens */
 }
 
 .carrossel-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    scroll-snap-align: start; /* Alinha cada imagem ao início */
+    flex: 0 0 auto; /* Impede que as imagens se redimensionem */
+    width: 300px; /* Largura fixa para cada imagem */
+    height: 300px; /* Altura fixa para cada imagem */
     border-radius: 15px;
-    transition: transform 0.5s ease-in-out;
-    display: none; /* Esconde todas as imagens por padrão */
-}
-
-.carrossel-img.ativa {
-    display: block; /* Mostra apenas a imagem ativa */
-}
-
-.carrossel-btn {
-    background-color: rgba(191, 54, 12, 0.7); /* Cor de fundo dos botões */
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carrossel-btn.anterior {
-    left: -50px; /* Posiciona o botão "anterior" à esquerda */
-}
-
-.carrossel-btn.proximo {
-    right: -50px; /* Posiciona o botão "próximo" à direita */
+    object-fit: cover;
+    border: 3px solid #BF360C;
+    filter: brightness(1.05) saturate(1.1); /* Suaviza as fotos */
 }
 
 /* Media Queries para dispositivos móveis */
